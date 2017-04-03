@@ -9,7 +9,7 @@ import CalloutContainer from '../Containers/CalloutContainer';
 import EventCategories from '../Lib/EventCategories';
 
 
-// const Mapviews = ({ events, socket, loadEvents, updateEvents }) => {
+
 export default class MapViewComponents extends Component {
   constructor(props) {
     super(props);
