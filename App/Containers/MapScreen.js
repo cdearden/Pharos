@@ -4,7 +4,7 @@ import { fetchEvents, updateEvent, updatePosition, saveWatchID, updateRegion } f
 
 // NOTE: this is the standard format
 // const mapStateToProps = (state, ownProps) => {
-// however the ownProps only have ownProps.socket so we use {socket}
+// however the ownProps only has ownProps.socket so we use {socket}
 
 const mapStateToProps = (state, ownProps) => ({
   events: state.events,
@@ -14,13 +14,13 @@ const mapStateToProps = (state, ownProps) => ({
   currentLocation: state.currentLocation,
 });
 
-// if the Mapview need to trigger any action
+// if the Mapview needs to trigger any action
 const mapDispatchToProps = (dispatch, ownProps) => ({
 
   getCurrentPosition: (cb) => {
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        dispatch(updatePosition(position)); //! !! add this action
+        dispatch(updatePosition(position));
         if (cb) { cb(position.coords); }
       },
       (err) => {},
